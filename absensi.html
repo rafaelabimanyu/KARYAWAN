@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="absensi.css">
+  <title>Halaman Absensi Karyawan</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <img src="img/J_J_GROUP_3-removebg-preview.png" alt="Company Logo">
+        <h1>J&J Group</h1>
+    </div>
+    <nav id="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Absensi</a></li>
+            <li><a href="#">Laporan</a></li>
+            <li><a href="#">Kontak</a></li>
+        </ul>
+    </nav>
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</header>
+      
+
+  <section id="attendanceFormSection">
+    <h2><i class="fas fa-user-check"></i> Form Absensi</h2>
+    <form id="attendanceForm">
+      <label for="employeeName">Nama Karyawan:</label>
+      <input type="text" id="employeeName" required placeholder="Masukkan nama karyawan...">
+
+      <label for="attendanceStatus">Status Kehadiran:</label>
+      <select id="attendanceStatus" required>
+        <option value="">Pilih Status</option>
+        <option value="Hadir">Hadir</option>
+        <option value="Cuti">Cuti</option>
+        <option value="Sakit">Sakit</option>
+      </select>
+
+      <button type="submit">Kirim Absensi</button>
+    </form>
+    <div id="notification" class="notification" style="display: none;"></div>
+  </section>
+
+  <section id="attendanceListSection">
+    <h2><i class="fas fa-list"></i> Daftar Absensi Hari Ini</h2>
+    <label for="filterInput">Cari: </label>
+    <input type="text" id="filterInput" placeholder="Cari berdasarkan nama...">
+
+    <table id="attendanceTable">
+      <thead>
+        <tr>
+          <th>Nama Karyawan</th>
+          <th>Status Kehadiran</th>
+        </tr>
+      </thead>
+      <tbody id="attendanceList"></tbody>
+    </table>
+  </section>
+
+  <script src="absensi.js"></script>
+</body>
+</html>
