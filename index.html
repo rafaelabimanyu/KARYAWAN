@@ -9,7 +9,7 @@
 <body>
   <!-- Sidebar untuk navigasi -->
   <aside class="sidebar">
-    <h2>Kantor XYZ</h2>
+    <h2>J&J Group</h2>
     <nav>
       <a href="dashboard.html" class="active">Dashboard</a>
       <a href="absensi.html">Absensi</a>
@@ -49,18 +49,30 @@
       </div>
     </section>
 
-    <!-- Grafik Keuangan -->
-    <section class="chart">
-      <h2>Grafik Pendapatan Bulanan</h2>
-      <canvas id="financeChart" width="400" height="200"></canvas>
+    <!-- Grafik Data -->
+    <section class="chart-section">
+      <h2>Grafik Kehadiran</h2>
+      <canvas id="attendanceChart"></canvas>
+      <h2>Grafik Pekerjaan</h2>
+      <canvas id="workChart"></canvas>
+    </section>
+
+    <!-- Manajemen Tugas -->
+    <section class="task-management">
+      <h2>Manajemen Tugas</h2>
+      <input type="text" id="taskInput" placeholder="Tambah Tugas...">
+      <button id="addTaskButton">Tambah</button>
+      <ul id="taskList"></ul>
+      <div class="performance-stats">
+        <p>Total Tugas: <span id="totalTasks">0</span></p>
+        <p>Tugas Selesai: <span id="completedTasks">0</span></p>
+      </div>
     </section>
 
     <!-- Notifikasi -->
     <section class="notifications">
       <h2>Notifikasi Tugas</h2>
-      <ul id="notificationList">
-        <!-- Notifikasi akan ditambahkan oleh JavaScript -->
-      </ul>
+      <ul id="notificationList"></ul>
     </section>
 
     <!-- Navigasi Cepat -->
